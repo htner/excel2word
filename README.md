@@ -26,10 +26,16 @@
 ```
 
 ## 安装
-mac下python3的安装
+### windos下python3的安装
+- 请注意，Python 3.11.8不能在Windows 7或更早版本上使用。Windows 7或更早版本请安装其他版本。
+- 下载 https://www.python.org/ftp/python/3.11.8/python-3.11.8-amd64.exe
+- 点击 python-3.11.8-amd64.exe 执行，出现安装对话框 选中选项“Add Python 3.6 to PATH”,将Python程序的路径加入到Path环境变量中, 然后点击 Install now
+- 点击 install_lib.bat 执行
+
+### mac下python3的安装
 mac下使用终端执行 python3 自动跳出xcode安装，直接安装即可 因python2存在一些中文编码的问题，故建议使用python3
 
-### MailMerge ImportError
+#### MailMerge ImportError
 ``` shell
 ImportError: cannot import name 'MailMerge' from 'mailmerge'
 ```
@@ -41,7 +47,7 @@ pip3 install docx-mailmerge
 然后就可以正常import
 
 
-### xlrd.biffh.XLRDError
+#### xlrd.biffh.XLRDError
 提示 不支持xlsx文件
 ``` shell
 xlrd.biffh.XLRDError: Excel xlsx file; not supported
