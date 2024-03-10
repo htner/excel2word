@@ -1,5 +1,9 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
+
+# Copyright 2024-present Htner. All rights reserved.
+# License:Apache License Version 2.0, January 2004 http://www.apache.org/licenses/
+
 import os
 import re
 import xlrd
@@ -77,7 +81,8 @@ def batch(maindir):
                     # due_plus_date=str(excel_date_convert(table.row_values(i)[8])),
                 # )
                 # os.chdir(path_name)
-                word_name = os.path.join(path_name, template_name[0:-14] + '_'+ str(table.row_values(i)[out_col_name-1]) +'_'+str(i)+ out_doc_type)
+                # word_name = os.path.join(path_name, template_name[0:-14] + '_'+ str(table.row_values(i)[out_col_name-1]) +'_'+str(i)+ out_doc_type)
+                word_name = os.path.join(path_name, str(table.row_values(i)[out_col_name-1]) + out_doc_type)
                 print("        正在保存 " + word_name)
                 doc.write(word_name)
                 print("        保存成功")
